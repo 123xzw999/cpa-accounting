@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPA一遍过 · 注册会计师全科目刷题系统</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg-layer" aria-hidden="true"></div>
+
+<!-- ===================== 登录 ===================== -->
+<section id="view-login" class="view is-active">
+  <div class="brand">
+    <h1 class="art-title" data-text="CPA一遍过">CPA一遍过</h1>
+    <p class="slogan">量变到质变的过程 需要的不是天赋 而是坚持和耐心</p>
+    <p class="slogan-sub">——坚持就是胜利</p>
+  </div>
+
+  <form class="login-card" id="login-form" autocomplete="off">
+    <h2>欢迎登录</h2>
+    <p class="login-sub">注册会计师 · 专业阶段六科 · 全知识点巧记 / 全题型精刷 / 历年真题考试</p>
+    <label class="field">
+      <span>用户名</span>
+      <input id="login-user" type="text" value="123456" spellcheck="false">
+    </label>
+    <label class="field">
+      <span>密码</span>
+      <input id="login-pass" type="text" value="xiaoxiang888" spellcheck="false">
+    </label>
+    <button type="submit" class="btn-login">登 录</button>
+    <p id="login-msg" class="login-msg"></p>
+    <p class="login-tip">默认用户名 <b>123456</b> · 默认密码 <b>xiaoxiang888</b></p>
+  </form>
+</section>
+
+<!-- ===================== 首页 ===================== -->
+<section id="view-home" class="view">
+  <div class="brand brand-home">
+    <h1 class="art-title" data-text="CPA一遍过">CPA一遍过</h1>
+    <p class="slogan">量变到质变的过程 需要的不是天赋 而是坚持和耐心</p>
+    <p class="slogan-sub">——坚持就是胜利</p>
+  </div>
+
+  <div class="home-user">
+    <span id="home-user-name">当前用户：123456</span>
+    <span class="home-note">专业阶段六科 · 每科满分 100 分 · 60 分合格</span>
+    <button class="link-btn" id="btn-logout">退出登录</button>
+  </div>
+
+  <div class="modules" id="modules"></div>
+
+  <div class="home-foot">
+    <p><b>考试规则速览：</b>客观题（单项选择 / 多项选择）自动判分，得出「客观题总分」；主观题（计算分析题 / 简答题 / 综合题 / 案例分析题 / 计算问答题）可直接在线书写，按标准答案自行估分后填入「主观题总分」，再一键计算总分。</p>
+    <p class="foot-sub">注：注册会计师专业阶段<b>不设判断题</b>；多项选择题<b>不设部分分</b>（不答、错答、漏答均不得分）。</p>
+  </div>
+</section>
+
+<!-- ===================== 全知识点巧记 ===================== -->
+<section id="view-knowledge" class="view">
+  <header class="topbar">
+    <button class="back" data-back>← 返回</button>
+    <h2 id="kb-title">全知识点巧记</h2>
+    <div class="topbar-tools">
+      <input id="kb-search" type="search" placeholder="搜索知识点 / 口诀 / 关键词…">
+      <button class="chip-btn" id="kb-flash">闪卡模式：关</button>
+      <button class="chip-btn" id="kb-fav">只看收藏</button>
+    </div>
+  </header>
+  <div class="kb-layout">
+    <aside class="kb-chapters" id="kb-chapters"></aside>
+    <main class="kb-list" id="kb-list"></main>
+  </div>
+</section>
+
+<!-- ===================== 全题型精刷 ===================== -->
+<section id="view-practice" class="view">
+  <header class="topbar">
+    <button class="back" data-back>← 返回</button>
+    <h2 id="pr-title">全题型精刷</h2>
+    <div class="topbar-tools">
+      <select id="pr-type"></select>
+      <select id="pr-chapter"></select>
+      <button class="chip-btn" id="pr-reset">重新开始</button>
+    </div>
+  </header>
+  <div class="pr-progress"><div class="pr-progress-bar" id="pr-bar"></div></div>
+  <main class="pr-stage" id="pr-stage"></main>
+</section>
+
+<!-- ===================== 历年真题考试 ===================== -->
+<section id="view-exam" class="view">
+  <header class="topbar">
+    <button class="back" data-back>← 返回</button>
+    <h2 id="ex-title">历年真题考试</h2>
+    <div class="topbar-tools">
+      <span class="exam-subject" id="ex-subject">会计</span>
+      <span class="timer" id="ex-timer">00:00</span>
+    </div>
+  </header>
+  <div class="ex-track" id="ex-track"></div>
+  <main class="ex-stage" id="ex-stage"></main>
+</section>
+
+<div id="toast" class="toast"></div>
+
+<!-- 六科知识点库 -->
+<script src="js/kb-accounting.js"></script>
+<script src="js/kb-audit.js"></script>
+<script src="js/kb-fm.js"></script>
+<script src="js/kb-tax.js"></script>
+<script src="js/kb-law.js"></script>
+<script src="js/kb-strategy.js"></script>
+<!-- 六科全题型题库 -->
+<script src="js/qb-accounting.js"></script>
+<script src="js/qb-audit.js"></script>
+<script src="js/qb-fm.js"></script>
+<script src="js/qb-tax.js"></script>
+<script src="js/qb-law.js"></script>
+<script src="js/qb-strategy.js"></script>
+<!-- 六科历年真题卷 -->
+<script src="js/exam-accounting.js"></script>
+<script src="js/exam-audit.js"></script>
+<script src="js/exam-fm.js"></script>
+<script src="js/exam-tax.js"></script>
+<script src="js/exam-law.js"></script>
+<script src="js/exam-strategy.js"></script>
+<!-- 应用逻辑 -->
+<script src="js/app.js"></script>
+</body>
+</html>

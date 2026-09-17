@@ -1,0 +1,9 @@
+# 忽略本地自测与临时文件（不要提交）
+_*.html
+_*.js
+_*.sh
+_*.txt
+_cprof*/
+_shots/
+_dom.html
+.gitignore.bak
