@@ -3,7 +3,10 @@ _*.html
 _*.js
 _*.sh
 _*.txt
-_cprof*/
-_shots/
 _dom.html
-.gitignore.bak
+# 浏览器 headless 探针产物
+_cprof*/
+_eprof*/
+_shots/
+_v/
+_live/
