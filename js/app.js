@@ -139,6 +139,9 @@
     });
     $("#btn-logout").addEventListener("click", function () {
       save({ user: "" });
+      $("#login-pass").value = "";      /* 退出后不残留密码 */
+      $("#login-msg").textContent = "";
+      $("#login-msg").style.color = "";
       show("login");
       toast("已退出登录");
     });
